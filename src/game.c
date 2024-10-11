@@ -6,6 +6,11 @@ void mouvement_joueur(char plateau[10][10], int *joueur_x, int *joueur_y, int *b
     printf("Entrez une direction (Z = Haut, S = Bas, Q = Gauche, D = Droite) : ");
     scanf(" %c", &direction);
 
+    if (getchar() != '\n') {
+        printf("Erreur : veuillez entrer uniquement une lettre.\n");
+        return;
+    }
+
     switch (direction) {
         case 'Z':
         case 'z':

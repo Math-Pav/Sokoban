@@ -55,7 +55,8 @@ int main(){
         "Niveau/niveau_1.txt",
         "Niveau/niveau_2.txt",
         "Niveau/niveau_3.txt",
-        "Niveau/niveau_4.txt"
+        "Niveau/niveau_4.txt",
+        "Niveau/niveau_5.txt"
     }; 
 
     int nombre_niveau = sizeof(liste_niveau) / sizeof(liste_niveau[0]);
