@@ -104,6 +104,10 @@ void deplacement_joueur_bas(char plateau[10][10], int *joueur_x, int *joueur_y)
 
 void deplacement_box_bas(char plateau[10][10], int *box_x, int *box_y, int *joueur_x, int *joueur_y)
 {
+    if (plateau[*box_x + 1][*box_y] == '#') {
+        printf("Vous avez touché un mur ! Vous avez perdu.\n");
+        exit(0);
+    }
     if (plateau[*box_x + 1][*box_y] != '#' && (plateau[*box_x + 1][*box_y] == ' ' || plateau[*box_x + 1][*box_y] == '.')) 
     {
         plateau[*box_x][*box_y] = ' ';
@@ -120,6 +124,10 @@ void deplacement_box_bas(char plateau[10][10], int *box_x, int *box_y, int *joue
 
 void deplacement_box_haut(char plateau[10][10], int *box_x, int *box_y, int *joueur_x, int *joueur_y)
 {
+    if (plateau[*box_x - 1][*box_y] == '#') {
+        printf("Vous avez touché un mur ! Vous avez perdu.\n");
+        exit(0);
+    }
     if (plateau[*box_x - 1][*box_y] != '#' && (plateau[*box_x - 1][*box_y] == ' ' || plateau[*box_x - 1][*box_y] == '.')) 
     {   
         plateau[*box_x][*box_y] = ' ';
@@ -136,6 +144,10 @@ void deplacement_box_haut(char plateau[10][10], int *box_x, int *box_y, int *jou
 
 void deplacement_box_gauche(char plateau[10][10], int *box_x, int *box_y, int *joueur_x, int *joueur_y)
 {
+    if (plateau[*box_x][*box_y - 1] == '#') {
+        printf("Vous avez touché un mur ! Vous avez perdu.\n");
+        exit(0);
+    }
      if (plateau[*box_x][*box_y - 1] != '#' && (plateau[*box_x][*box_y - 1] == ' ' || plateau[*box_x][*box_y - 1] == '.')) 
      {
         plateau[*box_x][*box_y] = ' '; 
@@ -152,6 +164,10 @@ void deplacement_box_gauche(char plateau[10][10], int *box_x, int *box_y, int *j
 
 void deplacement_box_droite(char plateau[10][10], int *box_x, int *box_y, int *joueur_x, int *joueur_y)
 {
+    if (plateau[*box_x][*box_y - 1] == '#') {
+        printf("Vous avez touché un mur ! Vous avez perdu.\n");
+        exit(0);
+    }
     if (plateau[*box_x][*box_y + 1] != '#' && (plateau[*box_x][*box_y + 1] == ' ' || plateau[*box_x][*box_y + 1] == '.')) 
     {
         plateau[*box_x][*box_y] = ' ';
